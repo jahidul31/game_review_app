@@ -1,5 +1,5 @@
 import dbConnect from "../../utility/mongo";
-import tester from "../../models/Tester";
+import tester from "../../models/Gamerhub";
 
 export default async function handler(req, res) {
   await dbConnect();
@@ -7,12 +7,12 @@ export default async function handler(req, res) {
   const method = req.method;
 
   switch (method) {
-    case "POST":
+    case "GET":
       try {
-        const users = await tester.create(req.body);
-        res.status(201).json({ success: true, data: users });
+        const users = await tester.find();
+        res.status(200).json({ success: true, data: users });
       } catch (error) {
-        res.status(400).json({ success: false });
+        res.status(400).json({ success: "game not found" });
       }
       break;
     default:
