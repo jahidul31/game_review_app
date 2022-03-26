@@ -8,13 +8,14 @@ function Result({ games }) {
       <div className="grid sm:grid-cols-2  gap-4 sm:p-10 items-center justify-center">
         {games === undefined
           ? games.map((game) => (
-              <div className="group">
+              <div className="group" key={game._id}>
                 <div className="p-10">
                   <Image
                     src={game.thum}
                     layout="responsive"
                     width={620}
                     height={400}
+                    alt="result"
                   />
                   <div
                     className="text-3xl mt-10 mb-5 underline decoration-green-600 decoration-wavy decoration-2 underline-offset-8 text-gray-800 leading-relaxed"

@@ -20,13 +20,16 @@ function Addgames({ token }) {
   const [prog, setProg] = useState(0);
   const mydomain = process.env.NEXT_PUBLIC_DOMAIN;
 
-  useEffect(() => {
-    if (name || desc || fileurl) {
-      postGame(name, desc, user, fileurl);
-    }
-  }, [fileurl]);
+  useEffect(
+    (name, desc, fileurl, user) => {
+      if (name || desc || fileurl) {
+        postGame(name, desc, user, fileurl);
+      }
+    },
+    [fileurl]
+  );
 
-  const postGame = async () => {
+  const postGame = async (name, desc, user, fileurl) => {
     try {
       const newgame = {
         email: user,
@@ -168,7 +171,7 @@ function Addgames({ token }) {
               </div>
             </div>
             <div className="">
-              <Image src="/img/login.svg" width={1280} height={720} />
+              <Image alt="img" src="/img/login.svg" width={1280} height={720} />
             </div>
           </div>
         </div>

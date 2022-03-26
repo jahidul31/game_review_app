@@ -13,6 +13,7 @@ function Hero() {
           objectFit="cover"
           objectPosition="center"
           className="immm"
+          alt="hero_alt"
         />
         <div className="sm:w-1/2 w-full text-center z-10">
           <h1 className=" md:text-6xl text-3xl font-bold sm:pb-10 pb-5">

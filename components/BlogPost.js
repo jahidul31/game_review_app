@@ -19,6 +19,7 @@ function BlogPost() {
                   height={1080}
                   objectFit="cover"
                   objectPosition="center"
+                  alt="Image alt"
                 />
                 <div className="p-6">
                   <h1 className="title-font text-xl font-medium text-gray-900 mb-3">

@@ -7,7 +7,7 @@ export default function Addrevies() {
     <>
       <div className="flex gap-40 p-20">
         <div className="flex flex-col justify-center items-center ">
-          <Image src="/img/login.svg" width={1280} height={720} />
+          <Image src="/img/login.svg" width={1280} height={720} alt="img" />
           <h1 className="text-2xl font-extrabold tracking-wider text-gray-900 my-4 uppercase">
             God of war
           </h1>
